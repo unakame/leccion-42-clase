@@ -7,6 +7,7 @@ const db         = levelup('./data', {valueEnconding: 'json'});
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 const router = express.Router();
 
